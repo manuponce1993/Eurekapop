@@ -1928,11 +1928,11 @@ body {
   margin-left: -30%;
   text-align: center;
 }
-@media (max-width: 576px) {
+/*@media (max-width: 576px) {
   .cid-re7qgaT1Ly .mbr-slider .carousel-indicators {
     display: none !important;
   }
-}
+}*/
 .cid-re7qgaT1Ly .mbr-slider > .container img {
   width: 100%;
 }
@@ -2373,11 +2373,67 @@ h2{
 
 
 
-.carousel-indicators li {
+/*.carousel-indicators li {
   background-color: orange;
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 100%;
+}*/
+
+.carousel-indicators li {
+  max-width: 20px;
+  width: 20px;
+  height: 20px;
+  max-height: 20px;
+  margin: 3px;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  opacity: .5;
+  transition: all .3s;
+}
+
+#small-controls .carousel-control {
+  top: 50%;
+  width: 3rem;
+  height: 3rem;
+  margin-top: -1.5rem;
+  font-size: 1.5em;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  transition: all .3s;
+}
+
+#small-controls .carousel-control .icon-next,
+#small-controls .carousel-control .icon-prev {
+  margin-top: -18px;
+  font-size: 40px;
+  line-height: 27px;
+}
+
+#small-controls .carousel-control:hover {
+  background: #1b1b1b;
+  color: #fff;
+  opacity: 0.8;
+}
+
+#small-controls .carousel-control.carousel-control-prev {
+  left: 0;
+  margin-left: 2.5rem;
+}
+
+#small-controls .carousel-control.carousel-control-next {
+  right: 0;
+  margin-right: 2.5rem;
+}
+
+#small-controls .carousel-control .mbr-iconfont {
+  font-size: 1.5rem;
+}
+
+.carousel-indicators li.active , .carousel-indicators li:hover {
+  opacity: 0.9;
 }
 
 .multi-carousel-events {
@@ -2406,4 +2462,10 @@ h2{
 
 #redes-sociales .seguidores {
   color: #465052;
+}
+
+#slider-copia {
+  background-image: url("../../../assets/images/fondo-management.jpg");
+  background-repeat: repeat;
+
 }
