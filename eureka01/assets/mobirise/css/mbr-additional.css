@@ -2550,7 +2550,7 @@ h2{
 }
 
 .info-modal {
-    height: 368px;
+    height: 426px;
     overflow-y: scroll;
 }
 
@@ -2570,6 +2570,12 @@ h2{
 .modal-fechas li a{
     background-color: #bebcbc;
     color: #E97500 !important;
+    padding-left:3px;
+    padding-right:3px;
+}
+
+.modal-agenda {
+    max-width: 1100px;
 }
 
 
