@@ -2540,9 +2540,37 @@ h2{
 }
 
 #slider-copia {
-  background-image: url("../../../assets/images/fondo-management.jpg");
+  background-image: url("../../../assets/images/fondo-booking.png");
   background-repeat: repeat;
 
+}
+
+.titulo-modal {
+    color: #E97500;
+}
+
+.info-modal {
+    height: 368px;
+    overflow-y: scroll;
+}
+
+.descargas-modal {
+    list-style-type: none;
+    background-color: #E97500;
+}
+
+.descargas-modal .icono {
+    font-size: 1.5em;
+}
+
+.modal-fechas  {
+    list-style-type: none;
+}
+
+.modal-fechas li a{
+    background-color: #bebcbc;
+    color: #E97500 !important;
+}
 }
 
 #info3-c {
