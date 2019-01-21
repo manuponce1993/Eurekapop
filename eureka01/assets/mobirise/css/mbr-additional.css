@@ -1374,12 +1374,12 @@ body {
 }
 .cid-re7qaKzja7 .navbar {
   padding: .5rem 0;
-  background: #343a40;
+  background: white;
   transition: none;
   min-height: 77px;
 }
 .cid-re7qaKzja7 .navbar-dropdown.bg-color.transparent.opened {
-  background: #343a40;
+  background: white;
 }
 .cid-re7qaKzja7 a {
   font-style: normal;
@@ -1498,7 +1498,7 @@ body {
 }
 .cid-re7qaKzja7 .navbar.navbar-short {
   min-height: 60px;
-  transition: all .2s;
+  transition: all 2s;
 }
 .cid-re7qaKzja7 .navbar.navbar-short .navbar-toggler-right {
   top: 20px;
@@ -2386,14 +2386,58 @@ h2{
 @media screen and (max-width: 992px) {
   #etiqueta {
        font-size: 2vw;
-     }
-   }
+  }
+}
 
-   @media screen and (max-width: 576px) {
+@media screen and (max-width: 576px) {
     #etiqueta {
-     font-size: 3.8vw;
-   }
- }
+        font-size: 3.8vw;   
+    }
+}
+
+
+/*Fotos del carrusel principal*/
+@media screen and (max-width: 576px) {
+    #carousel1 {
+        background-image: url(../../images/carousel1-mobil.jpg);
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    #carousel1 {
+        background-image: url(../../images/carousel1-intermediate.jpg);
+    }
+}
+
+
+@media screen and (min-width: 993px) {
+    #carousel1 {
+        background-image: url(../../images/carousel1-desktop.jpg);
+    }
+}
+
+
+
+@media screen and (max-width: 576px) {
+    #carousel2 {
+        background-image: url(../../images/carousel2-mobil.jpg);
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    #carousel2 {
+        background-image: url(../../images/carousel2-intermediate.png);
+    }
+}
+
+
+@media screen and (min-width: 993px) {
+    #carousel2 {
+        background-image: url(../../images/carousel2-desktop.jpg);
+    }
+}
+
+
 
 
 .carousel-indicators li {
@@ -2468,8 +2512,12 @@ h2{
   max-width: 100%;
 }
 
+#slider1-2 {
+    /*margin-top: 63px;*/
+}
+
 .facebook {
-  color: #3b5998 !important;
+    color: #3b5998 !important;
 }
 
 .instagram {
@@ -2528,4 +2576,13 @@ h2{
 
 .modal-agenda {
     max-width: 1100px;
+}
+
+#info3-c {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.staff-img{
+    width: 240px;
+    height: 240px;
 }

@@ -63,7 +63,19 @@
     $( "a.scrollLink" ).click(function( event ) {
     event.preventDefault()
     $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top }, 500)
-     })
+    })
+
+    /*var twitter_username = 'eurekapop';
+
+    $.ajax({
+        url: "https://cdn.syndication.twimg.com/widgets/followbutton/info.json?screen_names=" + twitter_username,
+        dataType: 'json',
+        crossDomain: true,
+        success: function (data) {
+            console.log(data)
+            $(".seguidores-twitter").html(data[0]['followers_count'])
+        }
+     }*/
 
 
 
