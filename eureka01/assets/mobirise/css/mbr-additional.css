@@ -1839,6 +1839,7 @@ body {
 .cid-re7qgaT1Ly .carousel-item {
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  /*cambio para probar*/
   background-size: cover;
   -o-transition: -o-transform 0.6s ease-in-out;
   -webkit-transition: -webkit-transform 0.6s ease-in-out;
@@ -2006,7 +2007,7 @@ body {
     padding-bottom: 90px;
 
 
-    background-image: url("../../../assets/images/letras7.png");
+    background-image: url("../../../assets/images/letrasfinal.png");
     /*background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("../../../assets/images/letras7 - copia.png");*/
     /* Full height */
     height: 90%;
@@ -2399,20 +2400,20 @@ h2{
 /*Fotos del carrusel principal*/
 @media screen and (max-width: 576px) {
     #carousel1 {
-        background-image: url(../../images/carousel1-mobil.jpg);
+        background-image: url(../../images/agenda/carousel1-mobil.jpg);
     }
 }
 
 @media screen and (min-width: 577px) and (max-width: 992px) {
     #carousel1 {
-        background-image: url(../../images/carousel1-intermediate.jpg);
+        background-image: url(../../images/agenda/carousel1-intermediate.jpg);
     }
 }
 
 
 @media screen and (min-width: 993px) {
     #carousel1 {
-        background-image: url(../../images/carousel1-desktop.jpg);
+        background-image: url(../../images/agenda/carousel1-desktop.jpg);
     }
 }
 
@@ -2420,24 +2421,41 @@ h2{
 
 @media screen and (max-width: 576px) {
     #carousel2 {
-        background-image: url(../../images/carousel2-mobil.jpg);
+        background-image: url(../../images/agenda/carousel2-mobil.jpg);
     }
 }
 
 @media screen and (min-width: 577px) and (max-width: 992px) {
     #carousel2 {
-        background-image: url(../../images/carousel2-intermediate.png);
+        background-image: url(../../images/agenda/carousel2-intermediate.jpg);
     }
 }
 
 
 @media screen and (min-width: 993px) {
     #carousel2 {
-        background-image: url(../../images/carousel2-desktop.jpg);
+        background-image: url(../../images/agenda/carousel2-desktop.jpg);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #carousel3 {
+        background-image: url(../../images/agenda/carousel3-mobil.jpg);
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    #carousel3 {
+        background-image: url(../../images/agenda/carousel3-intermediate.jpg);
     }
 }
 
 
+@media screen and (min-width: 993px) {
+    #carousel3 {
+        background-image: url(../../images/agenda/carousel3-desktop.jpg);
+    }
+}
 
 
 .carousel-indicators li {
@@ -2577,6 +2595,7 @@ h2{
 .modal-agenda {
     max-width: 1100px;
 }
+
 
 #info3-c {
     background-color: rgba(0, 0, 0, 0.2);
