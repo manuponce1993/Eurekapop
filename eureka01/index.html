@@ -25,15 +25,36 @@
 <body>
 
 
+        <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
             <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-agenda" role="document">
                 <div class="modal-content">
-                    <!--<div class="modal-header">
+                    <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                    </div>-->
+                    </div>
                     <div class="modal-body">
                         <div class="row">
                             <div class="col-xs-12 col-lg-5">
@@ -71,6 +92,10 @@
                                 </ul>
                             </div>
                         </div>
+                    </div>
+                    <div class="modal-footer ml-auto mr-auto">
+                        <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal">Cerrar</button>  
+                        
                     </div>
                 </div>
             </div>
@@ -111,7 +136,7 @@
                         <a class="nav-link link text-black display-4" href="index.html#testimonials1-4">STAFF</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link text-black display-4" href="index.html#multi-carousel-events">MANAGEMENT</a>
+                        <a class="nav-link link text-black display-4" href="index.html#slider-copia">BOOKING</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link link text-black display-4" href="index.html#redes-sociales">COMUNIDAD</a>
@@ -133,6 +158,7 @@
             <li data-app-prevent-settings="" data-target="#slider1-2" class="active" data-slide-to="0"></li>
             <li data-app-prevent-settings="" data-target="#slider1-2" data-slide-to="1"></li>
             <li data-app-prevent-settings="" data-target="#slider1-2" data-slide-to="2"></li>
+            <li data-app-prevent-settings="" data-target="#slider1-2" data-slide-to="3"></li>
         </ol>
         <div class="carousel-inner" role="listbox">
             <!-- Las fotos del carrusel se cambian por css segun tamaño de pantalla (media en css) en mbr-additional.css -->
@@ -151,7 +177,6 @@
               <a href="#slider-copia" data-target="#slider-copia" data-slide-to="1" class="scrollLink">
                 <div class="container container-slide">
                     <div class="image_wrapper">
-                        <img src="assets/images/web-960x400.jpg">
                         <div class="carousel-caption justify-content-center">
                             <div class="col-10 align-right"></div>
                         </div>
@@ -159,11 +184,21 @@
                 </div>
               </a>
             </div>
-            <div class="carousel-item slider-fullscreen-image" data-bg-video-slide="false" style="background-image: url(assets/images/web-960x400.jpg);">
+            <div class="carousel-item slider-fullscreen-image" id="carousel2" data-bg-video-slide="false">
+              <a href="#slider-copia" data-target="#slider-copia" data-slide-to="1" class="scrollLink">
+                <div class="container container-slide">
+                    <div class="image_wrapper">
+                        <div class="carousel-caption justify-content-center">
+                            <div class="col-10 align-right"></div>
+                        </div>
+                    </div>
+                </div>
+              </a>
+            </div>
+            <div class="carousel-item slider-fullscreen-image" data-bg-video-slide="false" id="carousel3">
               <a href="#slider-copia" data-target="#slider-copia" data-slide-to="2" class="scrollLink">
                 <div class="container container-slide">
                     <div class="image_wrapper">
-                        <img src="assets/images/web-960x400.jpg">
                         <div class="carousel-caption justify-content-center">
                             <div class="col-10 align-right"></div>
                         </div>
@@ -254,7 +289,7 @@
 
             <div class="panel-item ">
                 <div class="card-block p-0">
-                    <img class="rounded-circle staff-img" src="assets/images/juanM.jpg">
+                    <img class="rounded-circle staff-img" src="assets/images/staff/juanM.jpg">
                     <p class="mbr-text mbr-fonts-style display-7"></p>
                 </div>
                 <div class="card-footer">
@@ -270,7 +305,7 @@
      <div class="mbr-testimonial align-center col-12 col-md-6 col-lg-4 col-xl-3">
         <div class="panel-item ">
             <div class="card-block p-0">
-                <img class="rounded-circle staff-img" src="assets/images/Santi.jpg">
+                <img class="rounded-circle staff-img" src="assets/images/staff/Santi.jpg">
                 <p class="mbr-text mbr-fonts-style display-7"></p>
             </div>
             <div class="card-footer">
@@ -286,7 +321,7 @@
 <div class="mbr-testimonial align-center col-12 col-md-6 col-lg-4 col-xl-3">
     <div class="panel-item ">
         <div class="card-block p-0">
-            <img class="rounded-circle staff-img" src="assets/images/Pipi.jpg">
+            <img class="rounded-circle staff-img" src="assets/images/staff/Pipi.jpg">
             <p class="mbr-text mbr-fonts-style display-7"></p>
         </div>
         <div class="card-footer">
@@ -300,10 +335,26 @@
 </div>
 </div>
 <div class="mbr-testimonial align-center col-12 col-md-6 col-lg-4 col-xl-3">
+    <div class="panel-item ">
+        <div class="card-block p-0">
+            <img class="rounded-circle staff-img" src="assets/images/staff/Pipi.jpg">
+            <p class="mbr-text mbr-fonts-style display-7"></p>
+        </div>
+        <div class="card-footer">
+            <div class="mbr-author-name mbr-bold mbr-fonts-style display-7">
+             Celina
+         </div>
+         <small class="mbr-author-desc mbr-italic mbr-light mbr-fonts-style display-7">
+           Tour Manager / Producción
+       </small>
+   </div>
+</div>
+</div>
+<div class="mbr-testimonial align-center col-12 col-md-6 col-lg-4 col-xl-3">
 
     <div class="panel-item ">
         <div class="card-block p-0">
-            <img class="rounded-circle staff-img" src="assets/images/omar.jpg">
+            <img class="rounded-circle staff-img" src="assets/images/staff/omar.jpg">
             <p class="mbr-text mbr-fonts-style display-7"></p>
         </div>
         <div class="card-footer">
@@ -653,7 +704,7 @@
             <div class="media-container-row content mbr-white">
                 <div class="col-md-4 col-sm-4">
                     <p class="mb-3 mbr-fonts-style foot-title display-7"></p>
-                    <p class="mbr-text mbr-fonts-style mbr-links-column display-7"><a href="#top" class="text-secondary">AGENDA</a><br><a href="index.html#info3-c" class="text-secondary">QUIENES SOMOS&nbsp;</a><br><a href="index.html#testimonials1-4" class="text-secondary">STAFF</a><br><a href="index.html#multi-carousel-events" class="text-secondary">MANAGEMENT</a><br><a href="index.html#redes-sociales" class="text-secondary">COMUNIDAD</a><br><a class="text-secondary" href="index.html#form1-7">CONTACTO</a></p>
+                    <p class="mbr-text mbr-fonts-style mbr-links-column display-7"><a href="#top" class="text-secondary">AGENDA</a><br><a href="index.html#info3-c" class="text-secondary">QUIENES SOMOS&nbsp;</a><br><a href="index.html#testimonials1-4" class="text-secondary">STAFF</a><br><a href="index.html#slider-copia" class="text-secondary">BOOKING</a><br><a href="index.html#redes-sociales" class="text-secondary">COMUNIDAD</a><br><a class="text-secondary" href="index.html#form1-7">CONTACTO</a></p>
                 </div>
                 <div class="col-md-4 col-sm-8 text-center">
                     <p class="mb-4 foot-title mbr-fonts-style display-7">
@@ -721,14 +772,16 @@
     </section>
 
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-            Launch demo modal
-        </button>
-
-
-
-
-
+        <!-- Probe como centrar col en b4 -->
+        <div class="container">
+            <div class="row">
+                <div class="col-3 mx-auto">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                        Launch demo modal
+                    </button>      
+                </div>
+            </div>
+        </div>
 
     <script src="assets/web/assets/jquery/jquery.min.js"></script>
     <script src="assets/popper/popper.min.js"></script>
@@ -748,7 +801,8 @@
     <script src="assets/formoid/formoid.min.js"></script>
     <script src="assets/scripts/script.js"></script>
 
-    <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i></i></a></div>
+    <!-- Le saqué la flecha que te redirije hacia arriba en mobil -->
+    <div id="scrollToTop" class="scrollToTop mbr-arrow-up d-none d-sm-block"><a style="text-align: center;"><i></i></a></div>
     <input name="animation" type="hidden">
 </body>
 </html>
