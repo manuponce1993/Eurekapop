@@ -2626,3 +2626,12 @@ h2{
     width: 240px;
     height: 240px;
 }
+
+.lista-multimedia li a:hover {
+    color: #E97500 !important;
+}
+
+.lista-multimedia li {
+    padding: 5px;
+    font-size:1.1em;
+}
