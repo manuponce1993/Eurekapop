@@ -81,7 +81,7 @@
             swal("Enviado!","Te responderemos a la brevedad","success");
         }, function () {
             $('#btnEnviar').text('Enviar');
-            swal("Enviado!","Te responderemos a la brevedad","success");
+            swal("Error!","No se ha podida enviar el mensaje","error");
         })
 
         // .then(function () {
