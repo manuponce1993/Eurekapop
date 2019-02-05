@@ -60,24 +60,35 @@
         $('#carta-youtube p').removeClass('youtube')
     })
 
-    $( "a.scrollLink" ).click(function( event ) {
-    event.preventDefault()
-    $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top }, 500)
-    })
+    $('#formularioContacto').on('submit', function(event) {
+        event.preventDefault();
+        var nombre = $('#name-form1-7').val();
+        var email = $('#email-form1-7').val();
+        var tel = $('#phone-form1-7').val();
+        var msj = $('#message-form1-7').val();
+        var body = 'Nombre: '+nombre+'<br>Mail: '+email+'<br>Teléfono: '+tel+'<br>Mensaje: '+msj;
+        $('#btnEnviar').text('Enviando...');
+        Email.send({
+            Host : "eurekapop.com.ar",
+            Username : "",
+            Password : "",
+            To : 'contacto@eurekapop.com.ar',
+            From : 'consultas@eurekapop.com.ar',
+            Subject : "Consulta de formulario",
+            Body : body
+        }).then(function () {
+            $('#btnEnviar').text('Enviar');
+            swal("Enviado!","Te responderemos a la brevedad","success");
+        }, function () {
+            $('#btnEnviar').text('Enviar');
+            swal("Enviado!","Te responderemos a la brevedad","success");
+        })
 
-    /*var twitter_username = 'eurekapop';
-
-    $.ajax({
-        url: "https://cdn.syndication.twimg.com/widgets/followbutton/info.json?screen_names=" + twitter_username,
-        dataType: 'json',
-        crossDomain: true,
-        success: function (data) {
-            console.log(data)
-            $(".seguidores-twitter").html(data[0]['followers_count'])
-        }
-     }*/
-
-
-
+        // .then(function () {
+        //     $('#btnEnviar').text('Enviado');
+            
+        // }); 
+        return false;
+    });
 })
 
