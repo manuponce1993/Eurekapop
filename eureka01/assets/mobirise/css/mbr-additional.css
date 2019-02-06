@@ -2635,3 +2635,10 @@ h2{
     padding: 5px;
     font-size:1.1em;
 }
+
+.img-responsive-16by9 {
+    display: block;
+    height: 0;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+}
