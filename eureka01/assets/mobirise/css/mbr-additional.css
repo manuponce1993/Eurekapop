@@ -1849,6 +1849,10 @@ body {
   -webkit-perspective: 1000px;
   perspective: 1000px;
 }
+
+.carousel-item{
+  margin-top: 63px;
+}
 @media (max-width: 576px) {
   .cid-re7qgaT1Ly .carousel-item .container {
     width: 100%;
@@ -2413,7 +2417,7 @@ h2{
 
 @media screen and (min-width: 993px) {
     #carousel1 {
-        background-image: url(../../images/agenda/carousel1-desktop.jpg);
+        background-image: url(../../images/agenda/carousel1-desktop.png);
     }
 }
 
@@ -2434,7 +2438,7 @@ h2{
 
 @media screen and (min-width: 993px) {
     #carousel2 {
-        background-image: url(../../images/agenda/carousel2-desktop.jpg);
+        background-image: url(../../images/agenda/carousel2-desktop.png);
     }
 }
 
@@ -2453,7 +2457,7 @@ h2{
 
 @media screen and (min-width: 993px) {
     #carousel3 {
-        background-image: url(../../images/agenda/carousel3-desktop.jpg);
+        background-image: url(../../images/agenda/carousel3-desktop.png);
     }
 }
 
@@ -2472,7 +2476,7 @@ h2{
 
 @media screen and (min-width: 993px) {
     #carousel4 {
-        background-image: url(../../images/agenda/carousel4-desktop.jpg);
+        background-image: url(../../images/agenda/carousel4-desktop.png);
     }
 }
 
@@ -2596,6 +2600,10 @@ h2{
 
 .descargas-modal .icono {
     font-size: 1.5em;
+}
+
+.icono a{
+  color: white;
 }
 
 .modal-fechas  {
