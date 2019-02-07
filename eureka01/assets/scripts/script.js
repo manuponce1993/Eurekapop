@@ -67,8 +67,9 @@
         var tel = $('#phone-form1-7').val();
         var msj = $('#message-form1-7').val();
         var body = 'Nombre: '+nombre+'<br>Mail: '+email+'<br>Teléfono: '+tel+'<br>Mensaje: '+msj;
-        $('#btnEnviar').text('Enviando...');
+        $('#btnEnviar').val('Enviando...');
         $('#btnEnviar').prop('disabled', 'disabled');
+        setTimeout(function () { }, 5000);
         Email.send({
             Host : "eurekapop.com.ar",
             Username : "",
