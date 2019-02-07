@@ -2410,7 +2410,7 @@ h2{
 
 @media screen and (min-width: 577px) and (max-width: 992px) {
     #carousel1 {
-        background-image: url(../../images/agenda/carousel1-intermediate.jpg);
+        background-image: url(../../images/agenda/carousel1-intermediate.png);
     }
 }
 
@@ -2425,13 +2425,13 @@ h2{
 
 @media screen and (max-width: 576px) {
     #carousel2 {
-        background-image: url(../../images/agenda/carousel2-mobil.jpg);
+        background-image: url(../../images/agenda/carousel2-mobil.png);
     }
 }
 
 @media screen and (min-width: 577px) and (max-width: 992px) {
     #carousel2 {
-        background-image: url(../../images/agenda/carousel2-intermediate.jpg);
+        background-image: url(../../images/agenda/carousel2-intermediate.png);
     }
 }
 
@@ -2444,13 +2444,13 @@ h2{
 
 @media screen and (max-width: 576px) {
     #carousel3 {
-        background-image: url(../../images/agenda/carousel3-mobil.jpg);
+        background-image: url(../../images/agenda/carousel3-mobil.png);
     }
 }
 
 @media screen and (min-width: 577px) and (max-width: 992px) {
     #carousel3 {
-        background-image: url(../../images/agenda/carousel3-intermediate.jpg);
+        background-image: url(../../images/agenda/carousel3-intermediate.png);
     }
 }
 
@@ -2463,13 +2463,13 @@ h2{
 
 @media screen and (max-width: 576px) {
     #carousel4 {
-        background-image: url(../../images/agenda/carousel4-mobil.jpg);
+        background-image: url(../../images/agenda/carousel4-mobil.png);
     }
 }
 
 @media screen and (min-width: 577px) and (max-width: 992px) {
     #carousel4 {
-        background-image: url(../../images/agenda/carousel4-intermediate.jpg);
+        background-image: url(../../images/agenda/carousel4-intermediate.png);
     }
 }
 
