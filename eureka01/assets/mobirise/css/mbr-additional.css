@@ -2465,6 +2465,12 @@ h2{
     #carousel4 {
         background-image: url(../../images/agenda/carousel4-mobil.png);
     }
+
+    .carousel-indicators li {
+        width: 1.15em !important;
+        height: 1.15em !important;
+        margin: 1px !important;
+    }
 }
 
 @media screen and (min-width: 577px) and (max-width: 992px) {
@@ -2479,7 +2485,6 @@ h2{
         background-image: url(../../images/agenda/carousel4-desktop.png);
     }
 }
-
 
 .carousel-indicators li {
   max-width: 20px;
@@ -2521,23 +2526,16 @@ h2{
 
 #small-controls .carousel-control.carousel-control-prev {
   left: 0;
-  margin-left: 2.5rem;
+  margin-left: 1rem;
 }
 
 #small-controls .carousel-control.carousel-control-next {
   right: 0;
-  margin-right: 2.5rem;
+  margin-right: 1rem;
 }
 
 #small-controls .carousel-control .mbr-iconfont {
   font-size: 1.5rem;
-}
-
-.carousel-indicators li {
-  background-color: orange;
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 100%;
 }
 
 #small-controls .carousel-control .mbr-iconfont {
