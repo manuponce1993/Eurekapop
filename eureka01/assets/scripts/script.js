@@ -68,6 +68,7 @@
         var msj = $('#message-form1-7').val();
         var body = 'Nombre: '+nombre+'<br>Mail: '+email+'<br>Teléfono: '+tel+'<br>Mensaje: '+msj;
         $('#btnEnviar').text('Enviando...');
+        $('#btnEnviar').prop('disabled', 'disabled');
         Email.send({
             Host : "eurekapop.com.ar",
             Username : "",
@@ -78,16 +79,15 @@
             Body : body
         }).then(function () {
             $('#btnEnviar').text('Enviar');
+            $('#btnEnviar').removeAttr('disabled');
             swal("Enviado!","Te responderemos a la brevedad","success");
+            $('#formularioContacto').trigger("reset");
         }, function () {
             $('#btnEnviar').text('Enviar');
+            $('#btnEnviar').removeAttr('disabled');
             swal("Error!","No se ha podida enviar el mensaje","error");
+            $('#formularioContacto').trigger("reset");
         })
-
-        // .then(function () {
-        //     $('#btnEnviar').text('Enviado');
-            
-        // }); 
         return false;
     });
 })
