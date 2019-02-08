@@ -2651,3 +2651,22 @@ h2{
     padding-bottom: 56.25%;
     overflow: hidden;
 }
+
+
+.btn:focus, .btn:active, button:focus, button:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+#image-gallery .modal-footer{
+  display: block;
+}
+
+.thumb{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.galeria{
+  overflow: scroll;
+}
