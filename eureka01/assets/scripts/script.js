@@ -60,6 +60,30 @@
         $('#carta-youtube p').removeClass('youtube')
     })
 
+    $(".modal-booking").on('hidden.bs.modal', function(event) {
+        event.preventDefault();
+        $(".booking-fotos").hide()
+        $(".booking-videos").hide()
+    });
+
+    $(".modal-booking").on('shown.bs.modal', function(event) {
+        event.preventDefault();
+        $(".booking-fotos").show("")
+        $(".booking-videos").hide("")
+    });
+
+    $(".booking-btn-videos").on('click', function(event) {
+        event.preventDefault();
+        $(".booking-fotos").hide("slow")
+        $(".booking-videos").show("slow")
+    });
+
+    $(".booking-btn-fotos").on('click', function(event) {
+        event.preventDefault();
+        $(".booking-videos").hide("slow")
+        $(".booking-fotos").show("slow")
+    });
+
     $('#formularioContacto').on('submit', function(event) {
         event.preventDefault();
         var nombre = $('#name-form1-7').val();
