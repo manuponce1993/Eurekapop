@@ -2670,3 +2670,8 @@ h2{
 .galeria{
   overflow: scroll;
 }
+
+.mas-videos-youtube {
+  background-color: #ff0000 !important;
+  color: white;
+}
