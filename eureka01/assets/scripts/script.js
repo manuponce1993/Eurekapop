@@ -139,18 +139,7 @@
     //     $(".booking-fotos").show("slow")
     // });
 
-    $("#modal_booking1").on('hidden.bs.modal', function(event) {
-        event.preventDefault();
-        $("#booking-fotos1").hide()
-        $("#booking-videos1").hide()
-    });
-
-    $("#modal_booking1").on('shown.bs.modal', function(event) {
-        event.preventDefault();
-        console.log("se abrio");
-        $("#booking-fotos1").show("");
-        $("#booking-videos1").hide("");
-    });
+    
 
     $('#btn-booking-mas-videos').on('mouseenter', function(event) {
         event.preventDefault();
@@ -199,7 +188,7 @@
     }
 
     // Agrega y elimina la clase active_multimedia al link activo.
-    function add_and_remove_class_link_booking(index,idactivar,iddesactivar) {
+    function link_activo_booking(idactivar,iddesactivar) {
       if (!($(idactivar).hasClass('active_multimedia'))) {
             $(idactivar).addClass('active_multimedia');
       }
@@ -212,13 +201,27 @@
     function generar_vector_booking() {
       var vector_booking = new Array();
       for (var i = 0; i < cantidad_shows_booking; i++) {
-        vector_booking.push({boton_foto:'#booking-btn-fotos'+(i+1), 
+        vector_booking.push({modal: "#modal_booking"+(i+1),
+                             boton_foto:'#booking-btn-fotos'+(i+1), 
                              div_foto:'#booking-fotos'+(i+1),
                              boton_video:'#booking-btn-videos'+(i+1), 
                              div_video:'#booking-videos'+(i+1) });
       }
       return vector_booking;
     }
+
+    // $("#modal_booking1").on('hidden.bs.modal', function(event) {
+    //     event.preventDefault();
+    //     $("#booking-fotos1").hide()
+    //     $("#booking-videos1").hide()
+    // });
+
+    // $("#modal_booking1").on('shown.bs.modal', function(event) {
+    //     event.preventDefault();
+    //     console.log("se abrio");
+    //     $("#booking-fotos1").show("");
+    //     $("#booking-videos1").hide("");
+    // });
 
 
     // generar un evento onclick por cada boton definido en el vector vector_booking 
@@ -228,15 +231,30 @@
             event.preventDefault();
             $(value.div_video).hide("slow");
             $(value.div_foto).show("slow");
-            add_and_remove_class_link_booking(index,value.boton_foto,value.boton_video);
+            link_activo_booking(value.boton_foto,value.boton_video);
           });
 
           $(value.boton_video).on('click', function(event) {
             event.preventDefault();
             $(value.div_foto).hide("slow");
             $(value.div_video).show("slow");
-            add_and_remove_class_link_booking(index,value.boton_video,value.boton_foto);
+            link_activo_booking(value.boton_video,value.boton_foto);
           });
+
+          $(value.modal).on('shown.bs.modal', function(event) {
+              event.preventDefault();
+              link_activo_booking(value.boton_foto, value.boton_video);
+              $(value.div_foto).show();
+              $(value.div_video).hide();
+
+          });
+
+          $(value.modal).on('hidden.bs.modal', function(event) {
+              event.preventDefault();
+              $(value.div_foto).hide();
+              $(value.div_video).hide();
+          });
+
       });
     }
 
