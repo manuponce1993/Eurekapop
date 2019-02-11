@@ -84,6 +84,14 @@
         $(".booking-fotos").show("slow")
     });
 
+    $('.btn-booking-mas-videos').on('mouseenter', function(event) {
+        event.preventDefault();
+        $(this).addClass('mas-videos-youtube')
+    }).on('mouseleave', function(event) {
+        event.preventDefault();
+        $(this).removeClass('mas-videos-youtube')
+    });;
+
     $('#formularioContacto').on('submit', function(event) {
         event.preventDefault();
         var nombre = $('#name-form1-7').val();
