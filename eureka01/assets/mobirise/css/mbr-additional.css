@@ -2684,7 +2684,7 @@ h2{
   margin: auto;
   border-radius: 3px;
   overflow: hidden;
-  //position: relative;
+  /*position: relative;*/
 }
 .img-c {
   width: 200px;
@@ -2760,4 +2760,10 @@ h2{
     color: #a55301;
     outline: none;
     border-bottom: 0.1rem solid #a55301;
+}
+
+.separador{
+    margin-right: 16px;
+    margin-left: 15px;
+    border-left: 2px solid #E97500; 
 }
