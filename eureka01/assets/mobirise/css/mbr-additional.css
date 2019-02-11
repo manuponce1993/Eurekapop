@@ -1,7 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i);
 
 
-
+body, html{
+  height: 100%;
+}
 
 
 body {
@@ -2667,11 +2669,95 @@ h2{
   margin-bottom: 15px;
 }
 
-.galeria{
+/*.galeria{
   overflow: scroll;
-}
+}*/
 
 .mas-videos-youtube {
   background-color: #ff0000 !important;
   color: white;
+}
+
+
+.gallery {
+  width: 600px;
+  margin: auto;
+  border-radius: 3px;
+  overflow: hidden;
+  //position: relative;
+}
+.img-c {
+  width: 200px;
+  height: 200px;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-w {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: transform ease-in-out 300ms;
+}
+
+.img-w img {
+  display: none;
+}
+
+.img-c {
+    transition: width ease 400ms, height ease 350ms, left cubic-bezier(0.4, 0, 0.2, 1) 420ms, top cubic-bezier(0.4, 0, 0.2, 1) 420ms;
+}
+
+.img-c:hover .img-w {
+  transform: scale(1.08);
+  transition: transform cubic-bezier(0.4, 0, 0.2, 1) 450ms;
+}
+
+.img-c.activeAlt {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute;
+  z-index: 2;
+  //transform: translateX(-50%);
+}
+
+.img-c.postactiveAlt {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.img-c.activeAlt.positioned {
+  left: 0 !important;
+  top: 0 !important;
+  transition-delay: 50ms;
+}
+
+.modal-content {
+    /* 80% of window height */
+    height: 80%;
+}
+
+.modal-body {
+    /* 100% = dialog height, 120px = header + footer */
+    max-height: calc(100% - 120px);
+    overflow-y: scroll;
+}
+
+.link_multimedia_booking{
+  color: #E97500;
+}
+
+.link_multimedia_booking:hover{
+  color: #a55301;
+}
+
+.active_multimedia{
+    color: #a55301;
+    outline: none;
+    border-bottom: 0.1rem solid #a55301;
 }
