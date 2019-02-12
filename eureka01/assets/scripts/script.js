@@ -258,7 +258,7 @@
               link_activo_booking(value.boton_foto, value.boton_video);
               $(value.div_foto).show();
               $(value.div_video).hide();
-
+              $('#scrollToTop').css('display', 'none !important');
           });
 
           $(value.modal).on('hidden.bs.modal', function(event) {

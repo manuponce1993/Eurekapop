@@ -2790,3 +2790,35 @@ a.link_multimedia_booking.disabled {
 .modal-booking hr {
     margin: 6px !important;
 }
+
+.contrataciones{
+  background-color: transparent;
+}
+
+.contrataciones:hover{
+  background-color: #fd7e14;
+  color: white;
+}
+
+/* Scrollbar personalizada */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  /*background: transparent; */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #fd7e14;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #c1670b; 
+}
