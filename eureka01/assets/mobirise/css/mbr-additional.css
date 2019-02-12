@@ -2669,9 +2669,9 @@ h2{
   margin-bottom: 15px;
 }
 
-/*.galeria{
+.galeria{
   overflow: scroll;
-}*/
+}
 
 .mas-videos-youtube {
   background-color: #ff0000 !important;
@@ -2689,9 +2689,8 @@ h2{
 .img-c {
   width: 200px;
   height: 200px;
-  float: left;
   position: relative;
-  overflow: hidden;
+
 }
 
 .img-w {
@@ -2721,7 +2720,8 @@ h2{
   /*width: 100% !important;
   height: 100% !important;*/
   min-width: 100% !important;
-  min-height: 100% !important;
+  min-height: 80vh !important;
+  max-height: 80vh !important;
   position: absolute;
   z-index: 2;
   /*transform: translateX(-50%);*/
