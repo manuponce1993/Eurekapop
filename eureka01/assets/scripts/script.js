@@ -60,7 +60,6 @@
         $('#carta-youtube p').removeClass('youtube')
     })
 
-
     $('#formularioContacto').on('submit', function(event) {
         event.preventDefault();
         var nombre = $('#name-form1-7').val();
@@ -93,7 +92,6 @@
         return false;
     });
 
-
     //----------------- Js para modal -----------------//
 
     // Constante para determinar en que tamaño deja de agrandar la foto al hacerle click
@@ -112,17 +110,28 @@
     $(".img-w").each(function() {
       $(this).wrap("<div class='img-c'></div>")
       let imgSrc = $(this).find("img").attr("src");
-       $(this).css('background-image', 'url(' + imgSrc + ')');
+       $(this).css('background-image', 'url("' + imgSrc + '")');
     })
+
+    $('.img-c').each(function() {
+      $(this).addClass('col-4 p-0 m-0')
+    });
 
     if ( $(window).width() > width_size) {      
       bind_click_galeria();
-    }  
+      $('.img-c').addClass('col-4').removeClass('col-12');
+    } else {
+      $('.img-c').removeClass('col-4').addClass('col-12');      
+    }
 
     $(window).resize(function(){
-       if ($(window).width() <= width_size) {  
+       if ($(window).width() <= width_size) {
+          $('.img-c').removeClass('col-4').addClass('col-12');
+          $('.img-c .activeAlt').removeClass('activeAlt')
           unbind_click_galeria();
        }else{
+          $('.img-c').addClass('col-4').removeClass('col-12');
+          $('.activeAlt').removeClass('col-4').addClass('col-12')
           bind_click_galeria();
        }  
     })
@@ -164,7 +173,7 @@
         
         $(".activeAlt").not($(this)).remove()
         let copy = $(this).clone();
-        copy.insertAfter($(this)).height(h).width(w).delay(500).addClass("activeAlt")
+        copy.insertAfter($(this)).height(h).width(w).delay(500).addClass("activeAlt col-12")
         $(".activeAlt").css('top', y - 8);
         $(".activeAlt").css('left', x - 8);
         
