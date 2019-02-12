@@ -97,7 +97,7 @@
     // Constante para determinar en que tamaño deja de agrandar la foto al hacerle click
     const width_size = 700;
 
-    const cantidad_shows_booking = 1;
+    const cantidad_shows_booking = 3;
     // Vector con:
     //  -Ids de los botones video/fotos para cada show segun la cantidad de shows definidas en la constante "btns_categorias_multimedia"
     //  -Ids de los divs idem...

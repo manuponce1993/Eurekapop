@@ -2737,19 +2737,19 @@ h2{
   transition-delay: 50ms;
 }
 
-.modal-content {
+/*.modal-content {
     /* 80% of window height */
-    height: 80%;
-}
+   /* height: 80%;
+}*/
 
-.modal, .modal-body {
+/*.modal, .modal-body {
     /* 100% = dialog height, 120px = header + footer */
-    max-height: calc(100% - 20px);
-}
+    /*max-height: calc(100% - 20px);*/
+/*}
 
 .modal-body {
     overflow-y: scroll;
-}
+}*/
 
 .link_multimedia_booking{
   color: #E97500;
@@ -2769,4 +2769,10 @@ h2{
     margin-right: 16px;
     margin-left: 15px;
     border-left: 2px solid #E97500; 
+}
+
+.embed-responsive-16by9::before{padding-top:50.25% !important}
+
+.modal-booking hr {
+    margin: 6px !important;
 }
