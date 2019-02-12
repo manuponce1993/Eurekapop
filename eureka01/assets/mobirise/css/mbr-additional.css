@@ -2742,9 +2742,12 @@ h2{
     height: 80%;
 }
 
-.modal-body {
+.modal, .modal-body {
     /* 100% = dialog height, 120px = header + footer */
-    max-height: calc(100% - 120px);
+    max-height: calc(100% - 20px);
+}
+
+.modal-body {
     overflow-y: scroll;
 }
 
