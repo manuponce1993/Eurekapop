@@ -2678,13 +2678,25 @@ h2{
   color: white;
 }
 
+a.link_multimedia_booking.disabled {
+   pointer-events: none;
+   cursor: default;
+   color: grey;
+}
+
 
 .gallery {
   max-width: 100%;
   margin: auto;
   border-radius: 3px;
-  overflow: hidden;
+  /*overflow: scroll;*/
+  width: 100% !important;
+  max-height: 100vh !important;
   /*position: relative;*/
+}
+
+.container-gallery{
+  min-height: 80vh;
 }
 .img-c {
   width: 200px;
