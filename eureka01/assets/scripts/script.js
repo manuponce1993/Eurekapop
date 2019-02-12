@@ -150,7 +150,7 @@
 
     
 
-    $('#btn-booking-mas-videos').on('mouseenter', function(event) {
+    $('.btn-booking-mas-videos').on('mouseenter', function(event) {
         event.preventDefault();
         $(this).addClass('mas-videos-youtube')
     }).on('mouseleave', function(event) {
@@ -165,10 +165,12 @@
 
     function bind_click_galeria() {
       $(".img-c").click(function() {
-        let w = $(this).outerWidth()
+        // let w = $(this).outerWidth()
+        let w = 40
         let h = $(this).outerHeight()
         let x = $(this).offset().left
         let y = $(this).offset().top
+        console.log(w,h,x,y)
         
         
         $(".activeAlt").not($(this)).remove()
@@ -176,10 +178,11 @@
         copy.insertAfter($(this)).height(h).width(w).delay(500).addClass("activeAlt col-12")
         $(".activeAlt").css('top', y - 8);
         $(".activeAlt").css('left', x - 8);
+        $(".activeAlt").addClass('img-responsive');
         
           setTimeout(function() {
             copy.addClass("positioned")
-          }, 0)
+          }, 39)
       })
 
 
