@@ -144,6 +144,7 @@
                             <ul class="modal-fechas p-0">
                                 <li>
                                     10 y 11 de MAYO - DIOS SALVE A LA REINA EN EL TEATRO EL CIRCULO
+
                                     <a href="http://www.ticketek.com.ar/dios-salve-la-reina/teatro-el-circulo" target="_blank"><img src="assets/images/ticket.png" alt=""></a>
                                 </li>
                                 <li>
@@ -240,7 +241,7 @@
                             <ul class="modal-fechas p-0">
                                 <li>
                                     6 DE ABRIL - BALLET EN ROSARIO
-                                    <a href="https://www.tuticket.com.ar/655-el-lago-de-los-cisnes" target="_blank"><img src="assets/images/ticket.png" alt=""></a>
+                                    <a><img src="assets/images/ticket.png" alt=""></a>
                                 </li>
                                 <li>
                                     10 DE ABRIL - BALLET EN SALTA
@@ -565,78 +566,51 @@
         </div>
     </section>
 
-<!--MODAL BOOKING DIOS SALVE A LA REINA QUEEN-->
-<div class="modal-booking modal fade" id="modal_booking1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+
+
+
+<!--MODAL BOOKING DIOS SALVE A LA REINA-->
+<div class="modal fade" id="modal_booking1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-agenda" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="modal-title" id="exampleModalLabel">DIOS SALVE A LA REINA</h3>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <div class="modal-content text-center">
+                <div class="modal-header text-center">
+                    <h3 class="modal-title titulo-modal w-100" id="exampleModalLabel">DIOS SALVE A LA REINA</h3>
+                    <button type="button" class="close" id="btnCerrarModal" aria-label="Close" data-dismiss="modal">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <a class="booking-btn-fotos badge badge-primary">Fotos</a>
-                    <a class="booking-btn-videos badge badge-primary">Videos</a>
+                    <!-- Cambiar  id="booking-btn-fotosi"-->
+                    <a class="link_multimedia_booking" id="booking-btn-fotos1" href="">Fotos</a>
+                    <!-- Cambiar  id="booking-btn-videosi"-->
+                    <span class="separador"></span>
+                    <a class="link_multimedia_booking" id="booking-btn-videos1" href="">Videos</a>
                     <hr>
-                    <div style="width: 100%; height: 500px" class="booking-fotos galeria">
-                        <h1>FOTOS</h1>
+                    <!-- Cambiar  id="booking-fotosi"-->
+                    <div style="width: 100%; height: 500px" id="booking-fotos1"class="galeria">
+                        <!-- <h1>FOTOS</h1> -->
                         <div class="container">
                             <div class="row">
-                                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                                        <a class="thumbnail" href="#" data-image-id="" data-toggle="" data-title=""
-                                           data-image="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                           data-target="#image-gallery">
-                                            <img class="img-thumbnail"
-                                                 src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                                 alt="Another alt text">
-                                        </a>
-                                    </div>
-                                
-
-                                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                                        <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
-                                           data-image="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                           data-target="#image-gallery">
-                                            <img class="img-thumbnail"
-                                                 src="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                                 alt="Another alt text">
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                                        <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
-                                           data-image="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                           data-target="#image-gallery">
-                                            <img class="img-thumbnail"
-                                                 src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                                 alt="Another alt text">
-                                        </a>
-                                    </div>
-                                <div class="modal fade bg-danger" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog modal-lg">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h4 class="modal-title" id="image-gallery-title"></h4>
-                                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <img id="image-gallery-image" class="img-responsive col-md-12" src="">
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary float-left" id="show-previous-image"><i class="fa fa-arrow-left"></i>
-                                                </button>
-
-                                                <button type="button" id="show-next-image" class="btn btn-secondary float-right"><i class="fa fa-arrow-right"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
+                                <div class="gallery text-center">
+                                      <div class="img-w">
+                                        <img src="https://images.unsplash.com/photo-1485766410122-1b403edb53db?dpr=1&auto=format&fit=crop&w=1500&h=846&q=80&cs=tinysrgb&crop=" alt="" /></div>
+                                      <div class="img-w"><img src="https://images.unsplash.com/photo-1485793997698-baba81bf21ab?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=" alt="" /></div>
+                                      <div class="img-w"><img src="https://images.unsplash.com/photo-1485871800663-71856dc09ec4?dpr=1&auto=format&fit=crop&w=1500&h=2250&q=80&cs=tinysrgb&crop=" alt="" /></div>
+                                      <div class="img-w"><img src="https://images.unsplash.com/photo-1485871882310-4ecdab8a6f94?dpr=1&auto=format&fit=crop&w=1500&h=2250&q=80&cs=tinysrgb&crop=" alt="" /></div>
+                                      <div class="img-w"><img src="https://images.unsplash.com/photo-1485872304698-0537e003288d?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=" alt="" /></div>
+                                      <div class="img-w"><img src="https://images.unsplash.com/photo-1485872325464-50f17b82075a?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=" alt="" /></div>
+                                      <div class="img-w"><img src="https://images.unsplash.com/photo-1470171119584-533105644520?dpr=1&auto=format&fit=crop&w=1500&h=886&q=80&cs=tinysrgb&crop=" alt="" /></div>
+                                      <div class="img-w"><img src="https://images.unsplash.com/photo-1485881787686-9314a2bc8f9b?dpr=1&auto=format&fit=crop&w=1500&h=969&q=80&cs=tinysrgb&crop=" alt="" /></div>
+                                      <div class="img-w"><img src="https://images.unsplash.com/photo-1485889397316-8393dd065127?dpr=1&auto=format&fit=crop&w=1500&h=843&q=80&cs=tinysrgb&crop=" alt="" /></div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
-                    <div style="width: 100%" class="booking-videos">
+                    <!-- Cambiar  id="booking-videosi"-->
+                    <div style="width: 100%" id="booking-videos1">
                         <section class="carousel slide cid-re7qgaT1Ly" data-interval="false" id="slider-copia-2">
                             <div class="container-fluid pb-5">
                             <div class="row">
@@ -742,14 +716,14 @@
                             <div class="row">
                                 <div class="col text-right">
                                     <a href="https://www.youtube.com/channel/UC2aU3DUxB1ETMm7hmreA8bg" target="_blank"">
-                                        <button  class="btn btn-default btn-booking-mas-videos p-2">MAS VIDEOS &nbsp;<i class="fab fa-youtube"></i></button>
+                                        <button  class="btn btn-default p-2" id="btn-booking-mas-videos">MAS VIDEOS &nbsp;<i class="fab fa-youtube"></i></button>
                                     </a>
                                 </div>
                             </div>
                         </div>
                         </section>
-
                     </div>
+
                 </div>
             </div>
         </div>

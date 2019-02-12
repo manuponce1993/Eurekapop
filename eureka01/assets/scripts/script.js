@@ -60,37 +60,6 @@
         $('#carta-youtube p').removeClass('youtube')
     })
 
-    $(".modal-booking").on('hidden.bs.modal', function(event) {
-        event.preventDefault();
-        $(".booking-fotos").hide()
-        $(".booking-videos").hide()
-    });
-
-    $(".modal-booking").on('shown.bs.modal', function(event) {
-        event.preventDefault();
-        $(".booking-fotos").show("")
-        $(".booking-videos").hide("")
-    });
-
-    $(".booking-btn-videos").on('click', function(event) {
-        event.preventDefault();
-        $(".booking-fotos").hide("slow")
-        $(".booking-videos").show("slow")
-    });
-
-    $(".booking-btn-fotos").on('click', function(event) {
-        event.preventDefault();
-        $(".booking-videos").hide("slow")
-        $(".booking-fotos").show("slow")
-    });
-
-    $('.btn-booking-mas-videos').on('mouseenter', function(event) {
-        event.preventDefault();
-        $(this).addClass('mas-videos-youtube')
-    }).on('mouseleave', function(event) {
-        event.preventDefault();
-        $(this).removeClass('mas-videos-youtube')
-    });;
 
     $('#formularioContacto').on('submit', function(event) {
         event.preventDefault();
@@ -123,99 +92,171 @@
         })
         return false;
     });
+
+
+    //----------------- Js para modal -----------------//
+
+    // Constante para determinar en que tamaño deja de agrandar la foto al hacerle click
+    const width_size = 700;
+
+    const cantidad_shows_booking = 1;
+    // Vector con:
+    //  -Ids de los botones video/fotos para cada show segun la cantidad de shows definidas en la constante "btns_categorias_multimedia"
+    //  -Ids de los divs idem...
+    //  -Tipo (foto o video)
+    const vector_booking_datos = generar_vector_booking();
+
+    console.log(vector_booking_datos);
+
+
+    $(".img-w").each(function() {
+      $(this).wrap("<div class='img-c'></div>")
+      let imgSrc = $(this).find("img").attr("src");
+       $(this).css('background-image', 'url(' + imgSrc + ')');
+    })
+
+    if ( $(window).width() > width_size) {      
+      bind_click_galeria();
+    }  
+
+    $(window).resize(function(){
+       if ($(window).width() <= width_size) {  
+          unbind_click_galeria();
+       }else{
+          bind_click_galeria();
+       }  
+    })
+
+    // $("#booking-btn-videos").on('click', function(event) {
+    //     event.preventDefault();
+    //     $(".booking-fotos").hide("slow")
+    //     $(".booking-videos").show("slow")
+    // });
+
+    // $("#booking-btn-fotos").on('click', function(event) {
+    //     event.preventDefault();
+    //     $(".booking-videos").hide("slow")
+    //     $(".booking-fotos").show("slow")
+    // });
+
+    
+
+    $('#btn-booking-mas-videos').on('mouseenter', function(event) {
+        event.preventDefault();
+        $(this).addClass('mas-videos-youtube')
+    }).on('mouseleave', function(event) {
+        event.preventDefault();
+        $(this).removeClass('mas-videos-youtube')
+    });
+
+    bind_click_botones_booking();
+
+    //------------ Funciones ------------//
+
+
+    function bind_click_galeria() {
+      $(".img-c").click(function() {
+        let w = $(this).outerWidth()
+        let h = $(this).outerHeight()
+        let x = $(this).offset().left
+        let y = $(this).offset().top
+        
+        
+        $(".activeAlt").not($(this)).remove()
+        let copy = $(this).clone();
+        copy.insertAfter($(this)).height(h).width(w).delay(500).addClass("activeAlt")
+        $(".activeAlt").css('top', y - 8);
+        $(".activeAlt").css('left', x - 8);
+        
+          setTimeout(function() {
+            copy.addClass("positioned")
+          }, 0)
+      })
+
+
+      $(document).on("click", ".img-c.activeAlt", function() {
+        let copy = $(this)
+        copy.removeClass("positioned activeAlt").addClass("postactiveAlt")
+        setTimeout(function() {
+          copy.remove();
+        }, 500)
+      })
+    }
+
+    function unbind_click_galeria(argument) {
+      $(".img-c").attr("onclick", "").unbind("click");
+    }
+
+    // Agrega y elimina la clase active_multimedia al link activo.
+    function link_activo_booking(idactivar,iddesactivar) {
+      if (!($(idactivar).hasClass('active_multimedia'))) {
+            $(idactivar).addClass('active_multimedia');
+      }
+      if ($(iddesactivar).hasClass('active_multimedia')) {
+            $(iddesactivar).removeClass('active_multimedia');
+      }
+    }
+
+
+    function generar_vector_booking() {
+      var vector_booking = new Array();
+      for (var i = 0; i < cantidad_shows_booking; i++) {
+        vector_booking.push({modal: "#modal_booking"+(i+1),
+                             boton_foto:'#booking-btn-fotos'+(i+1), 
+                             div_foto:'#booking-fotos'+(i+1),
+                             boton_video:'#booking-btn-videos'+(i+1), 
+                             div_video:'#booking-videos'+(i+1) });
+      }
+      return vector_booking;
+    }
+
+    // $("#modal_booking1").on('hidden.bs.modal', function(event) {
+    //     event.preventDefault();
+    //     $("#booking-fotos1").hide()
+    //     $("#booking-videos1").hide()
+    // });
+
+    // $("#modal_booking1").on('shown.bs.modal', function(event) {
+    //     event.preventDefault();
+    //     console.log("se abrio");
+    //     $("#booking-fotos1").show("");
+    //     $("#booking-videos1").hide("");
+    // });
+
+
+    // generar un evento onclick por cada boton definido en el vector vector_booking 
+    function bind_click_botones_booking() {
+      vector_booking_datos.forEach( function(value,index,array) {
+          $(value.boton_foto).on('click', function(event) {
+            event.preventDefault();
+            $(value.div_video).hide("slow");
+            $(value.div_foto).show("slow");
+            link_activo_booking(value.boton_foto,value.boton_video);
+          });
+
+          $(value.boton_video).on('click', function(event) {
+            event.preventDefault();
+            $(value.div_foto).hide("slow");
+            $(value.div_video).show("slow");
+            link_activo_booking(value.boton_video,value.boton_foto);
+          });
+
+          $(value.modal).on('shown.bs.modal', function(event) {
+              event.preventDefault();
+              link_activo_booking(value.boton_foto, value.boton_video);
+              $(value.div_foto).show();
+              $(value.div_video).hide();
+
+          });
+
+          $(value.modal).on('hidden.bs.modal', function(event) {
+              event.preventDefault();
+              $(value.div_foto).hide();
+              $(value.div_video).hide();
+          });
+
+      });
+    }
+
 })
 
-
-
-let modalId = $('#image-gallery');
-
-$(document)
-  .ready(function () {
-
-    loadGallery(true, 'a.thumbnail');
-
-    //This function disables buttons when needed
-    function disableButtons(counter_max, counter_current) {
-      $('#show-previous-image, #show-next-image')
-        .show();
-      if (counter_max === counter_current) {
-        $('#show-next-image')
-          .hide();
-      } else if (counter_current === 1) {
-        $('#show-previous-image')
-          .hide();
-      }
-    }
-
-    /**
-     *
-     * @param setIDs        Sets IDs when DOM is loaded. If using a PHP counter, set to false.
-     * @param setClickAttr  Sets the attribute for the click handler.
-     */
-
-    function loadGallery(setIDs, setClickAttr) {
-      let current_image,
-        selector,
-        counter = 0;
-
-      $('#show-next-image, #show-previous-image')
-        .click(function () {
-          if ($(this)
-            .attr('id') === 'show-previous-image') {
-            current_image--;
-          } else {
-            current_image++;
-          }
-
-          selector = $('[data-image-id="' + current_image + '"]');
-          updateGallery(selector);
-        });
-
-      function updateGallery(selector) {
-        let $sel = selector;
-        current_image = $sel.data('image-id');
-        $('#image-gallery-title')
-          .text($sel.data('title'));
-        $('#image-gallery-image')
-          .attr('src', $sel.data('image'));
-        disableButtons(counter, $sel.data('image-id'));
-      }
-
-      if (setIDs == true) {
-        $('[data-image-id]')
-          .each(function () {
-            counter++;
-            $(this)
-              .attr('data-image-id', counter);
-          });
-      }
-      $(setClickAttr)
-        .on('click', function () {
-          updateGallery($(this));
-        });
-    }
-  });
-
-// build key actions
-// $(document)
-//   .keydown(function (e) {
-//     switch (e.which) {
-//       case 37: // left
-//         if ((modalId.data('bs.modal') || {})._isShown && $('#show-previous-image').is(":visible")) {
-//           $('#show-previous-image')
-//             .click();
-//         }
-//         break;
-
-//       case 39: // right
-//         if ((modalId.data('bs.modal') || {})._isShown && $('#show-next-image').is(":visible")) {
-//           $('#show-next-image')
-//             .click();
-//         }
-//         break;
-
-//       default:
-//         return; // exit this handler for other keys
-//     }
-//     e.preventDefault(); // prevent the default action (scroll / move caret)
-//   });
